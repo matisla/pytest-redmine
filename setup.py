@@ -8,30 +8,28 @@ def readme():
     with open('README.md', 'r') as readme_file:
         return readme_file.read()
 
-
 setup(
     name='pytest-redmine',
     version='0.0.1',
-    license='MIT',
+    license='MIT license',
     description='Pytest plugin for redmine',
     long_description= readme(),
+    author='Matthieu Herrmann',
     url='https://github.com/matisla/pytest-redmine',
-    packages=find_packages('src'),
-    package_dir={'':'src'},
+    packages=['pytest_redmine'],
     entry_points = {
         'pytest11' : [
-            'pytest-redmine = src.plugin',
+            'pytest-redmine = pytest_redmine.plugin',
         ]
     },
     classifiers=[
         'Development Status :: 1 - Planning',
         'Framework :: Pytest',
         'Intended Audience :: Developers',
-        'License :: OSI :: MIT License',
-        'Operation System :: Microsoft :: Windows',
-        'Operation System :: POSIX',
-        'Topic :: Software Developpement :: Testing',
-        'Topic :: Utilities',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: Microsoft :: Windows',
+        'Operating System :: POSIX',
+        'Topic :: Software Development :: Testing',
     ],
     keywords=[
         'redmine', 'pytest', 'py.test'
@@ -40,7 +38,5 @@ setup(
         'pytest',
         'python-redmine'
     ],
-    python_requires='>=3.6',
+    python_requires='>=3.6'
 )
-        
-
