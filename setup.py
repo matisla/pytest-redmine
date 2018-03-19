@@ -18,6 +18,11 @@ setup(
     url='https://github.com/matisla/pytest-redmine',
     packages=find_packages('src'),
     package_dir={'':'src'},
+    entry_points = {
+        'pytest11' : [
+            'pytest-redmine = pytest-redmine.plugin',
+        ]
+    }
     classifiers=[
         'Development Status :: 1 - Planning',
         'Framework :: Pytest',
@@ -33,6 +38,7 @@ setup(
     ],
     install_requires=[
         'pytest',
+        'python-redmine'
     ],
     python_requires='>=3.6',
 )
