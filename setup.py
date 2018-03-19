@@ -20,9 +20,9 @@ setup(
     package_dir={'':'src'},
     entry_points = {
         'pytest11' : [
-            'pytest-redmine = pytest-redmine.plugin',
+            'pytest-redmine = src.plugin',
         ]
-    }
+    },
     classifiers=[
         'Development Status :: 1 - Planning',
         'Framework :: Pytest',
